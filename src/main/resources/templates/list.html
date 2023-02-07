@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Bücherliste</h1>
+  <p><a href="/new">Neues Buch</a></p>
+  <div th:each="b : ${books}">
+    <h2>[[${b.title}]] - [[${b.author}]]</h2>
+    <p>[[${b.description}]]</p>
+    <p>[[${b.isbn}]]</p>
+    <p>[[${b.price}]]</p>
+    <hr>
+  </div>
+</body>
+</html>
